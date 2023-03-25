@@ -1,0 +1,33 @@
+@keyframes flames {
+    0% {transform: translateX(8px) rotateX(8deg) scale(0.995); filter: blur(2px);}
+    50% {transform: translateX(-8px) rotateX(-8deg) scale(1.005); filter: blur(3px);}
+    100% {transform: translateX(8px) rotateX(8deg) scale(0.995); filter: blur(2px);}
+}
+
+@keyframes shake {
+    0% {transform: translateX(3px) rotateX(2deg);}
+    50% {transform: translateX(-3px) rotateX(-2deg);}
+    100% {transform: translateX(3px) rotateX(2deg);}
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+.logo svg {
+    height: 100%;
+    width: 100%;
+}
+
+.logo .rocket-fuselage, .logo .rocket-window {
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+.logo .rocket-flame {
+    animation-name: flames;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
