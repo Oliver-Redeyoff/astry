@@ -20,14 +20,10 @@
     width: 100%;
 }
 
-.logo .rocket-fuselage, .logo .rocket-window {
-    animation-name: shake;
-    animation-duration: 0.2s;
-    animation-iteration-count: infinite;
+.logo .rocket-fuselage {
+    stroke: rgb(var(--primary-color));
 }
 
-.logo .rocket-flame {
-    animation-name: flames;
-    animation-duration: 0.2s;
-    animation-iteration-count: infinite;
+.logo .rocket-window, .logo .rocket-engine {
+    fill: rgb(var(--primary-color));
 }

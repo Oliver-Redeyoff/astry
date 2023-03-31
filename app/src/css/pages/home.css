@@ -1,62 +1,230 @@
-@keyframes move {
+@keyframes fly {
   0% {
-    offset-distance: 0%;
+    top: min(150vw, 150vh);
+    left: min(150vw, 150vh);
   }
   100% {
-    offset-distance: 100%;
+    top: 0px;
+    left: 0px;
   }
 }
 
-@keyframes flame {
+@keyframes boom {
   0% {
-    transform: translateY(0);
-    opacity: 0.1;
+    height: 0px;
+    width: 0px;
   }
   100% {
-    transform: translateY(200px);
+    height: max(300vh, 300vw);
+    width: max(300vh, 300vw);
+  }
+}
+
+@keyframes appear {
+  0% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
 }
 
-.home .welcome {
+@keyframes appear-slide {
+  0% {
+    margin-left: -10px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+.box-text {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.3em 0.8em;
+  border-radius: 1000px;
+}
+.box-text::after {
+  content: "_";
+}
+
+.welcome {
   position: relative;
-  background-color: #282c34;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  z-index: 30;
 }
 
-.home .welcome .animate {
-  position: absolute;
-  display: none;
-  height: 40px;
-  width: 40px;
-  transform: rotateZ(90deg);
-  z-index: 2;
+.welcome-header {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px var(--padding);
+  box-sizing: border-box;
 }
 
-.home .welcome .animate .logo {
+.welcome-header .header-logo {
   position: relative;
-  z-index: 4;
+  height: var(--logo-size);
+  width: var(--logo-size);
 }
 
-.home .welcome .animate .flames {
+.welcome-header .header-logo .logo-animate {
   position: absolute;
-  bottom: -30px;
-  left: calc(50% - 20px);
-  height: 30px;
-  width: 40px;
-  z-index: 3;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  transform: rotate(-45deg);
+  animation-name: fly;
+  animation-delay: var(--rocket-anim-delay);
+  animation-duration: var(--rocket-anim-time);
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
 }
 
-.home .welcome .animate .flames .flame {
+.welcome-header .header-logo .logo-animate .logo {
+  position: relative;
+  z-index: 15;
+}
+
+.welcome-header .header-logo .logo-animate .boom {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  left: calc(50% - 5px);
-  background-color: white;
+  background-color: rgb(var(--dark-color));
+  height: 0px;
+  width: 0px;
+  top: calc(var(--header-height)/2);
+  left: var(--padding);
+  transform: translateX(-50%) translateY(-50%);
   border-radius: 50%;
-  animation-name: flame;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
+  animation-name: boom;
+  animation-iteration-count: 1;
+  animation-duration: var(--boom-anim-time);
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time));
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+
+.welcome-header .header-logo .logo-animate .smoke {
+  position: absolute;
+  background: linear-gradient(to bottom right, rgba(var(--dark-color), 0.3) 30px, rgba(var(--orange-color), 0.3));
+  height: min(200vw, 200vh);
+  width: min(200vw, 200vh);
+  top: 100%;
+  left: 50%;
+  transform-origin: top left;
+  transform: rotate(45deg) skew(30deg, 30deg);
+  z-index: 5;
+}
+
+.welcome-header .header-name {
+  font-family: Space;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(var(--light-color));
+  animation-name: appear-slide;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time));
+  z-index: 15;
+}
+
+.welcome-body {
+  height: calc(100% - var(--header-height) - var(--sections-height));
+  width: 100%;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.welcome-body .slogan-container {
+  position: absolute;
+  width: calc(100vw - var(--padding)*2);
+  height: calc(100vh - var(--header-height) - 80px);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 20px;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.1s);
+}
+
+.welcome-body .slogan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: rgb(var(--light-color));
+  font-family: Space;
+  font-size: 60px;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.sections {
+  position: sticky;
+  display: flex;
+  width: 100vw;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  height: var(--sections-height);
+  font-size: 14px;
+  padding: 0px var(--padding);
+  color: rgb(var(--light-color));
+  box-sizing: border-box;
+  margin-top: calc(var(--sections-height) * -1 - 20px);
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time));
+  z-index: 100;
+}
+.sections-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: rgba(var(--text-color), 0.1);
+}
+.sections .sections-inner div {
+  display: inline-block;
+  animation-name: appear-slide;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.sections .sections-inner div:nth-of-type(1) {
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.1s);
+  background-color: rgba(var(--green-color), 0.8);
+}
+.sections .sections-inner div:nth-of-type(1):hover {
+  background-color: rgba(var(--green-color), 1);
+}
+.sections .sections-inner div:nth-of-type(2) {
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.2s);
+  background-color: rgba(var(--orange-color), 0.8);
+}
+.sections .sections-inner div:nth-of-type(2):hover {
+  background-color: rgba(var(--orange-color), 1);
+}
+.sections .sections-inner div:nth-of-type(3) {
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.3s);
+  background-color: rgba(var(--yellow-color), 0.8);
+}
+.sections .sections-inner div:nth-of-type(3):hover {
+  background-color: rgba(var(--yellow-color), 1);
+}
+.sections .sections-inner div:nth-of-type(4) {
+  animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.4s);
+  background-color: rgba(var(--pink-color), 0.8);
+}
+.sections .sections-inner div:nth-of-type(4):hover {
+  background-color: rgba(var(--pink-color), 1);
 }

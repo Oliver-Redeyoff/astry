@@ -1,55 +1,104 @@
 import '../../css/pages/home.css'
-
-import { useState, useEffect } from 'react';
+import '../../css/pages/about.css'
+import '../../css/pages/team.css'
+import '../../css/pages/projects.css'
+import '../../css/pages/contact.css'
 
 import Logo from '../misc/logo.js'
 
 
 function Home() {
 
-    const height = window.innerHeight
-    const width = window.innerWidth
-    const path_points = [
-        ["M ", [[1.5, 1.5]]],
-        ["C ", [[0.5, 1.0], [0.3, 0.5], [30, 30]]],
-    ]
-    var path_str = ""
-    path_points.forEach(stop => {
-        path_str += stop[0]
-        stop[1].forEach(point => {
-            var x = point[0]>2 ? point[0] : point[0]*width
-            var y = point[1]>2 ? point[1] : point[1]*height
-            path_str += x + "," + y + " "
-        })
-    })
-    const rocket_style = {
-        "display": "block",
-        "offsetPath": "path('" + path_str + "')", 
-        "animation": "move 3s ease 0.1s 1 normal forwards"
-    }
-
-    const [animateLogo, setAnimateLogo] = useState(false)
-
-    useEffect(() => {
-        setTimeout(() => {
-            setAnimateLogo(true)
-        }, 400)
-    }, [])
-
     return (
         <div className="home">
-            <div className="welcome">
-                <div className="animate" style={animateLogo ? rocket_style : {}}>
-                    <Logo />
-                    {/* <div className='flames'>
-                        {[...Array(100).keys()].map((i) => (
-                            <div className='flame' style={{
-                                "rotate": Math.random()*50-25 + 'deg',
-                                "animationDelay": Math.random() + 's',
-                            }} />
-                        ))}
-                    </div> */}
+            <div className='welcome'>
+
+                <div className="welcome-bg"></div>
+                
+                <div className='welcome-header'>
+                    <div className='header-logo'>
+                        <div className="logo-animate">
+                            <Logo />
+                            <div className='boom'></div>
+                            <div className='smoke'></div>
+                        </div>
+                    </div>
+                    <div className='header-name box-text'>Astry</div>
                 </div>
+                
+                <div className="welcome-body">
+                    <div className='slogan-container'>
+                        <div className='slogan'>
+                            We build apps
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div className='sections'>
+                <div className='sections-inner'>
+                    <div className='box-text'>About</div>
+                    <div className='box-text'>Team</div>
+                    <div className='box-text'>Projects</div>
+                    <div className='box-text'>Contact</div>
+                </div>
+            </div>
+
+            <div className='about'>
+                <h1>About</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                    tellus elementum.
+                </p>
+            </div>
+
+            <div className='team'>
+                <h1>Team</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                    tellus elementum.
+                </p>
+            </div>
+
+            <div className='projects'>
+                <h1>Projects</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                    tellus elementum.
+                </p>
+            </div>
+
+            <div className='contact'>
+                <h1>Contact</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                    tellus elementum.
+                </p>
             </div>
         </div>
     )

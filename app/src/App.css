@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Space;
+    src: url('./css/SpaceGrotesk.ttf');
+}
+
+:root {
+    --rocket-anim-delay: 0.4s;
+    --rocket-anim-time: 1.5s;
+    --boom-anim-time: 0.5s;
+
+    --padding: 40px;
+    --header-height: 80px;
+    --sections-height: 80px;
+    --logo-size: 40px;
+
+    --blue-color: 68, 116, 171;
+    --orange-color: 231, 111, 81;
+    --pink-color: 255, 93, 115; 
+    --yellow-color: 228, 182, 55;
+    --green-color: 81, 164, 138;
+    --dark-color: 40, 44, 52;
+    --light-color: 251, 255, 254;
+
+    --bg-color: var(--dark-color);
+    --text-color: var(--light-color);
+    --primary-color: var(--blue-color);
+}
+
+body {
+    background-color: rgb(var(--bg-color));
+    color: rgb(var(--text-color))
+}
+
+h1 {
+    font-family: Space;
+    font-size: 38px;
+}
+h1::after {
+    content: "_";
+}
