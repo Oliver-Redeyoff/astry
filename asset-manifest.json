@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.444c986c.css",
-    "main.js": "/react-gh-pages/static/js/main.c027f3b6.js",
-    "static/js/787.c1112931.chunk.js": "/react-gh-pages/static/js/787.c1112931.chunk.js",
-    "static/media/SpaceGrotesk.ttf": "/react-gh-pages/static/media/SpaceGrotesk.1036357b9651eff7d3dd.ttf",
-    "index.html": "/react-gh-pages/index.html",
-    "main.444c986c.css.map": "/react-gh-pages/static/css/main.444c986c.css.map",
-    "main.c027f3b6.js.map": "/react-gh-pages/static/js/main.c027f3b6.js.map",
-    "787.c1112931.chunk.js.map": "/react-gh-pages/static/js/787.c1112931.chunk.js.map"
+    "main.css": "/astry/static/css/main.817665f9.css",
+    "main.js": "/astry/static/js/main.0093995b.js",
+    "static/js/787.c1112931.chunk.js": "/astry/static/js/787.c1112931.chunk.js",
+    "static/media/SpaceGrotesk.ttf": "/astry/static/media/SpaceGrotesk.1036357b9651eff7d3dd.ttf",
+    "index.html": "/astry/index.html",
+    "main.817665f9.css.map": "/astry/static/css/main.817665f9.css.map",
+    "main.0093995b.js.map": "/astry/static/js/main.0093995b.js.map",
+    "787.c1112931.chunk.js.map": "/astry/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.444c986c.css",
-    "static/js/main.c027f3b6.js"
+    "static/css/main.817665f9.css",
+    "static/js/main.0093995b.js"
   ]
 }
