@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.444c986c.css",
+    "main.js": "/react-gh-pages/static/js/main.c027f3b6.js",
+    "static/js/787.c1112931.chunk.js": "/react-gh-pages/static/js/787.c1112931.chunk.js",
+    "static/media/SpaceGrotesk.ttf": "/react-gh-pages/static/media/SpaceGrotesk.1036357b9651eff7d3dd.ttf",
+    "index.html": "/react-gh-pages/index.html",
+    "main.444c986c.css.map": "/react-gh-pages/static/css/main.444c986c.css.map",
+    "main.c027f3b6.js.map": "/react-gh-pages/static/js/main.c027f3b6.js.map",
+    "787.c1112931.chunk.js.map": "/react-gh-pages/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.444c986c.css",
+    "static/js/main.c027f3b6.js"
+  ]
+}
