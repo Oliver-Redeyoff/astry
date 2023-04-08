@@ -1,7 +1,6 @@
 .team {
     position: relative;
     box-sizing: border-box;
-    background: linear-gradient(rgb(var(--dark-color)), rgba(var(--dark-color), 0.5));
     padding: 20px var(--padding);
     width: 100vw;
     z-index: 20;

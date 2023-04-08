@@ -13,15 +13,22 @@
     --sections-height: 80px;
     --logo-size: 40px;
 
-    --blue-color: 68, 116, 171;
+    /* --blue-color: 68, 116, 171; */
+    --blue-color: 145, 152, 229;
+    --red-color: 230, 100, 101;
     --orange-color: 231, 111, 81;
     --pink-color: 255, 93, 115; 
     --yellow-color: 228, 182, 55;
     --green-color: 81, 164, 138;
-    --dark-color: 40, 44, 52;
+    --dark-color: 50, 54, 62;
+    --darker-color: 40, 44, 52;
+    --darkerer-color: 30, 34, 42;
     --light-color: 251, 255, 254;
+    --lighter-color: 255, 255, 255;
 
-    --bg-color: var(--dark-color);
+    --bg-color: var(--darker-color);
+    --bg-lighter-color: var(--dark-color);
+    --bg-darker-color: var(--darkerer-color);
     --text-color: var(--light-color);
     --primary-color: var(--blue-color);
 }
