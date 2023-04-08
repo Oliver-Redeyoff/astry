@@ -4,8 +4,8 @@
 }
 
 :root {
-    --rocket-anim-delay: 0.4s;
-    --rocket-anim-time: 1.5s;
+    --rocket-anim-delay: 0.5s;
+    --rocket-anim-time: 1.8s;
     --boom-anim-time: 0.5s;
 
     --padding: 40px;
@@ -13,8 +13,8 @@
     --sections-height: 80px;
     --logo-size: 40px;
 
-    /* --blue-color: 68, 116, 171; */
-    --blue-color: 145, 152, 229;
+    --blue-color: 68, 116, 171;
+    --purple-color: 145, 152, 229;
     --red-color: 230, 100, 101;
     --orange-color: 231, 111, 81;
     --pink-color: 255, 93, 115; 
@@ -31,11 +31,16 @@
     --bg-darker-color: var(--darkerer-color);
     --text-color: var(--light-color);
     --primary-color: var(--blue-color);
+    --about-color: var(--green-color);
+    --team-color: var(--orange-color);
+    --projects-color: var(--yellow-color);
+    --contact-color: var(--pink-color);
 }
 
 body {
     background-color: rgb(var(--bg-color));
-    color: rgb(var(--text-color))
+    color: rgb(var(--text-color));
+    font-family: "Inter", sans-serif;
 }
 
 h1 {

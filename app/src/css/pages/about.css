@@ -1,11 +1,7 @@
-.about {
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px var(--padding);
-    width: 100vw;
-    z-index: 20;
+#about {
+    width: 100%;
 }
 
-.about h1::after {
-    color: rgb(var(--green-color));
+#about h1::after {
+    color: rgb(var(--about-color));
 }

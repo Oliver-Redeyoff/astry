@@ -1,11 +1,7 @@
-.team {
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px var(--padding);
-    width: 100vw;
-    z-index: 20;
+#team {
+    width: 100%;
 }
 
-.team h1::after {
-    color: rgb(var(--orange-color));
+#team h1::after {
+    color: rgb(var(--team-color));
 }

@@ -107,75 +107,79 @@ function Home() {
                                 "animationDuration": (10 * star[0]) + "s"
                             }} />
                         ))}
-                        <div className='slogan'><span>{slogan}</span><span className='cursor'>_</span></div>
+                        <div className='slogan'><span>{slogan}</span></div>
                     </div>
                 </div>
             
             </div>
 
-            <div className='sections'>
-                <div className='sections-inner'>
-                    <div className='box-text'>About</div>
-                    <div className='box-text'>Team</div>
-                    <div className='box-text'>Projects</div>
-                    <div className='box-text'>Contact</div>
+            <div className='section-links'>
+                <div className='section-links-inner'>
+                    <a href="#about"><div className='section-link about box-text'>About</div></a>
+                    <a href="#team"><div className='section-link team box-text'>Team</div></a>
+                    <a href="#projects"><div className='section-link projects box-text'>Projects</div></a>
+                    <a href="#contact"><div className='section-link contact box-text'>Contact</div></a>
                 </div>
             </div>
 
-            <div className='about'>
-                <h1>About</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
-                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
-                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
-                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
-                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
-                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
-                    tellus elementum.
-                </p>
-            </div>
+            <div className='content'>
 
-            <div className='team'>
-                <h1>Team</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
-                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
-                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
-                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
-                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
-                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
-                    tellus elementum.
-                </p>
-            </div>
+                <div id='about' className='section'>
+                    <h1>About</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                        sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                        varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                        Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                        elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                        Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                        tellus elementum.
+                    </p>
+                </div>
 
-            <div className='projects'>
-                <h1>Projects</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
-                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
-                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
-                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
-                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
-                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
-                    tellus elementum.
-                </p>
-            </div>
+                <div id='team' className='section'>
+                    <h1>Team</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                        sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                        varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                        Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                        elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                        Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                        tellus elementum.
+                    </p>
+                </div>
 
-            <div className='contact'>
-                <h1>Contact</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
-                    sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
-                    varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
-                    Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
-                    elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
-                    Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
-                    tellus elementum.
-                </p>
+                <div id='projects' className='section'>
+                    <h1>Projects</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                        sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                        varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                        Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                        elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                        Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                        tellus elementum.
+                    </p>
+                </div>
+
+                <div id='contact' className='section'>
+                    <h1>Contact</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et dolore magna aliqua. Volutpat diam ut venenatis tellus. A condimentum vitae 
+                        sapien pellentesque habitant. Diam maecenas ultricies mi eget. Integer feugiat scelerisque 
+                        varius morbi enim nunc faucibus a pellentesque. Varius duis at consectetur lorem donec. 
+                        Nam at lectus urna duis convallis convallis. Sagittis aliquam malesuada bibendum arcu vitae 
+                        elementum curabitur vitae nunc. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. 
+                        Cursus metus aliquam eleifend mi. Mauris augue neque gravida in fermentum et. Mattis enim ut 
+                        tellus elementum.
+                    </p>
+                </div>
+
             </div>
         </div>
     )

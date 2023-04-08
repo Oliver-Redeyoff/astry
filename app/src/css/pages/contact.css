@@ -1,11 +1,7 @@
-.contact {
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px var(--padding);
-    width: 100vw;
-    z-index: 20;
+#contact {
+    width: 100%;
 }
 
-.contact h1::after {
-    color: rgb(var(--pink-color));
+#contact h1::after {
+    color: rgb(var(--contact-color));
 }

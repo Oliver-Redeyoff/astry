@@ -1,11 +1,7 @@
-.projects {
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px var(--padding);
-    width: 100vw;
-    z-index: 20;
+#projects {
+    width: 100%;
 }
 
-.projects h1::after {
-    color: rgb(var(--yellow-color));
+#projects h1::after {
+    color: rgb(var(--projects-color));
 }

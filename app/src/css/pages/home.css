@@ -45,7 +45,7 @@
     transform: translateX(0px) translateY(0px);
   }
   100% {
-    transform: translateX(2000px) translateY(2000px);
+    transform: translateX(100vw) translateY(100vh);
   }
 }
 
@@ -65,6 +65,7 @@
   background-color: rgba(255, 255, 255, 0.08);
   padding: 0.3em 0.8em;
   border-radius: 1000px;
+  font-weight: 500;
 }
 .box-text::after {
   content: "_";
@@ -147,11 +148,12 @@
 .welcome-header .header-name {
   font-family: Space;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   animation-name: appear-slide;
   animation-duration: 1s;
   animation-fill-mode: backwards;
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time));
+  background: linear-gradient(135deg, rgba(var(--red-color), 0.7) 0%, rgba(var(--purple-color), 0.7) 50%, rgba(var(--yellow-color), 0.7) 100%);
   z-index: 15;
 }
 
@@ -168,10 +170,10 @@
   align-items: center;
   justify-content: center;
   width: calc(100vw - var(--padding)*2);
-  height: calc(100vh - var(--header-height) - 150px);
+  height: calc(100vh - var(--header-height) - 120px);
   overflow: hidden;
   left: 50%;
-  top: calc(var(--header-height) + 20px);
+  top: calc(var(--header-height));
   border: 2px solid rgba(var(--text-color), 0.1);
   transform: translateX(-50%);
   border-radius: 20px;
@@ -204,22 +206,24 @@
 }
 
 .welcome-body .slogan {
+  position: relative;
   color: rgb(var(--text-color));
   min-width: 350px;
   font-weight: 600;
   background: rgb(var(--red-color));
-  background: linear-gradient(135deg, rgb(var(--red-color)) 0%, rgb(var(--blue-color)) 50%, rgb(var(--yellow-color)) 100%); 
+  background: linear-gradient(135deg, rgb(var(--red-color)) 0%, rgb(var(--purple-color)) 50%, rgb(var(--yellow-color)) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Space;
   font-size: 60px;
 }
 
-.welcome-body .slogan .cursor {
-  -webkit-text-fill-color: white;
+.welcome-body .slogan::after {
+  content: "_";
+  -webkit-text-fill-color: rgb(var(--text-color));
 }
 
-.sections {
+.section-links {
   position: sticky;
   display: flex;
   width: 100vw;
@@ -237,7 +241,7 @@
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time));
   z-index: 100;
 }
-.sections-inner {
+.section-links-inner {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -246,49 +250,62 @@
   background-color: rgba(var(--text-color), 0.1);
   backdrop-filter: blur(4px);
 }
-.sections .sections-inner div {
+.section-links-inner .section-link {
   display: inline-block;
   animation-name: appear-slide;
   animation-duration: 1s;
   animation-fill-mode: backwards;
   cursor: pointer;
-  transition: all 0.6s;
+  color: rgb(var(--text-color));
+  transition: all 0.3s;
 }
-.sections .sections-inner div:nth-of-type(1) {
+.section-link.about {
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.1s);
-  background-color: rgba(var(--green-color), 0.8);
+  background-color: rgba(var(--about-color), 0.8);
 }
-.sections .sections-inner div:nth-of-type(1):hover {
-  background-color: rgba(var(--green-color), 1);
+.section-link.about:hover {
+  background-color: rgba(var(--about-color), 1);
+  transform: scale(1.06);
 }
-.sections .sections-inner div:nth-of-type(2) {
+.section-link.team {
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.2s);
-  background-color: rgba(var(--orange-color), 0.8);
+  background-color: rgba(var(--team-color), 0.8);
 }
-.sections .sections-inner div:nth-of-type(2):hover {
-  background-color: rgba(var(--orange-color), 1);
+.section-link.team:hover {
+  background-color: rgba(var(--team-color), 1);
+  transform: scale(1.06);
 }
-.sections .sections-inner div:nth-of-type(3) {
+.section-link.projects {
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.3s);
-  background-color: rgba(var(--yellow-color), 0.8);
+  background-color: rgba(var(--projects-color), 0.8);
 }
-.sections .sections-inner div:nth-of-type(3):hover {
-  background-color: rgba(var(--yellow-color), 1);
+.section-link.projects:hover {
+  background-color: rgba(var(--projects-color), 1);
+  transform: scale(1.06);
 }
-.sections .sections-inner div:nth-of-type(4) {
+.section-link.contact {
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + 0.4s);
-  background-color: rgba(var(--pink-color), 0.8);
+  background-color: rgba(var(--contact-color), 0.8);
 }
-.sections .sections-inner div:nth-of-type(4):hover {
-  background-color: rgba(var(--pink-color), 1);
+.section-link.contact:hover {
+  background-color: rgba(var(--contact-color), 1);
+  transform: scale(1.06);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px var(--padding);
+  z-index: 20;
+}
+.content .section {
+  max-width: 1000px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 750px) {
 
-  .sections {
-    font-size: 12px;
-  }
- 
   .welcome-body .slogan {
     text-align: center;
     min-width: 0px;
@@ -296,7 +313,11 @@
     font-size: 40px;
   }
 
-  .sections-inner {
+  .section-links {
+    font-size: 13px;
+  }
+
+  .section-links-inner {
     gap: 10px;
     padding: 10px 15px;
     border-radius: 15px;
