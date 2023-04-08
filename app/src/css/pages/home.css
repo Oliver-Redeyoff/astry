@@ -49,6 +49,18 @@
   }
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
 .box-text {
   background-color: rgba(255, 255, 255, 0.08);
   padding: 0.3em 0.8em;
@@ -203,6 +215,10 @@
   font-size: 60px;
 }
 
+.welcome-body .slogan .cursor {
+  -webkit-text-fill-color: white;
+}
+
 .sections {
   position: sticky;
   display: flex;
@@ -265,4 +281,25 @@
 }
 .sections .sections-inner div:nth-of-type(4):hover {
   background-color: rgba(var(--pink-color), 1);
+}
+
+@media (max-width: 750px) {
+
+  .sections {
+    font-size: 12px;
+  }
+ 
+  .welcome-body .slogan {
+    text-align: center;
+    min-width: 0px;
+    width: calc(100% - 40px);
+    font-size: 40px;
+  }
+
+  .sections-inner {
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+
 }

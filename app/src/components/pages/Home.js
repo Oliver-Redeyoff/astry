@@ -94,7 +94,7 @@ function Home() {
                             <div className='smoke'></div>
                         </div>
                     </div>
-                    <div className='header-name box-text'>Estry</div>
+                    <div className='header-name box-text'>Astry</div>
                 </div>
                 
                 <div className="welcome-body">
@@ -107,7 +107,7 @@ function Home() {
                                 "animationDuration": (10 * star[0]) + "s"
                             }} />
                         ))}
-                        <div className='slogan'><span>{slogan}</span></div>
+                        <div className='slogan'><span>{slogan}</span><span className='cursor'>_</span></div>
                     </div>
                 </div>
             
