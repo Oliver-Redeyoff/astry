@@ -1,7 +1,130 @@
-#projects {
+.projects {
     width: 100%;
 }
 
-#projects h1::after {
-    color: rgb(var(--projects-color));
+.projects .transition-banner {
+    position: relative;
+    text-align: center;
+    padding: 20vh 0px;
+    font-size: 40px;
+    background-image: linear-gradient(
+        135deg, 
+        rgba(var(--purple-color), 0.8) 0%, 
+        rgba(var(--red-color), 0.8) 50%, 
+        rgba(var(--yellow-color), 0.8) 100%
+    );
+}
+
+.projects .transition-banner h2 {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: rgba(var(--text-color), 0.1);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.projects .transition-banner .rocket-container {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 40%;
+    bottom: 0px;
+    z-index: 5;
+}
+
+.projects-inner {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    max-width: 1000px;
+    padding: 0px var(--padding);
+    margin-top: 160px;
+    margin-bottom: 100px;
+}
+
+.projects-inner .previous-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.previous-project {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.previous-project .preview {
+    width: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-image: linear-gradient(135deg, rgb(var(--purple-color)) 0%, rgb(var(--red-color)) 50%, rgb(var(--yellow-color)) 100%);
+}
+.previous-project .preview img {
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.previous-project .preview:hover img {
+    opacity: 0.5;
+}
+
+.previous-project .description {
+    width: 50%;
+}
+.previous-project .description h3 {
+    background-color: rgba(var(--text-color), 0.1);
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.previous-project .description .body {
+    background-color: rgba(var(--text-color), 0.1);
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.previous-project .description .techs {
+    display: flex;
+    gap: 10px;
+}
+.previous-project .description .techs .tech {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+.previous-project .description .techs .tech:nth-of-type(1) {
+    background-color: rgb(var(--red-color));
+}
+.previous-project .description .techs .tech:nth-of-type(2) {
+    background-color: rgb(var(--purple-color));
+}
+.previous-project .description .techs .tech:nth-of-type(3) {
+    background-color: rgb(var(--yellow-color));
+}
+.previous-project .description .techs .tech:nth-of-type(4) {
+    background-color: rgb(var(--green-color));
+}
+
+
+@media (max-width: 800px) {
+    .previous-project {
+        flex-direction: column;
+    }
+    .previous-project .preview {
+        width: 100%;
+    }
+    .previous-project .description {
+        width: 100%;
+    }
 }

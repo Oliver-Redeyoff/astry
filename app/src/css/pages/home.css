@@ -145,7 +145,7 @@
   animation-iteration-count: 1;
 }
 
-.header .header-logo .logo-animate .logo {
+.header .header-logo .logo-animate .rocket {
   position: relative;
 }
 
@@ -157,11 +157,12 @@
   top: 100%;
   left: 50%;
   transform-origin: top left;
-  transform: rotate(45deg) skew(30deg, 30deg);
+  transform: rotate(45deg) skew(35deg, 35deg);
   animation-name: disappear;
   animation-duration: 1s;
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time));
   animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
 .header .header-name {
@@ -231,7 +232,7 @@
 .welcome {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: rgb(var(--bg-lighter-color));
   z-index: 5;
 }
@@ -351,7 +352,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px var(--padding);
   animation-name: show-content;
   animation-duration: 0.1s;
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + var(--text-anim-time));

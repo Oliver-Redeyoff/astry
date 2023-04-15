@@ -4,8 +4,11 @@ import '../../css/pages/projects.css'
 import '../../css/pages/contact.css'
 
 import { useState, useEffect } from 'react'
+import Fade from 'react-reveal/Fade'
+import { Parallax } from 'react-scroll-parallax'
 
-import Logo from '../misc/logo.js'
+import Rocket from '../misc/rocket.js'
+import creativebook from '../../assets/creativebook.png'
 
 
 function Home() {
@@ -83,7 +86,7 @@ function Home() {
             <div className='header'>
                 <div className='header-logo'>
                     <div className="logo-animate">
-                        <Logo />
+                        <Rocket />
                         <div className='smoke'></div>
                     </div>
                 </div>
@@ -117,7 +120,7 @@ function Home() {
                     <div className='slogan-container'>
                         <h1 className='slogan multicolored-text'><span>{slogan}</span></h1>
                     </div>
-                    <div className='scroll-indicator'><i class="fa-solid fa-arrow-down"></i></div>
+                    <div className='scroll-indicator'><i className="fa-solid fa-arrow-down"></i></div>
                 </div>
             
             </div>
@@ -133,23 +136,69 @@ function Home() {
                     </div>
 
                     <div className="work-categories">
-                        <div className="work-category">
-                            <div className="icon"><i class="fa-solid fa-microchip"></i></div>
-                            <div className="description">With over 10 years of experience working with the newest and best 
-                            technologies, we will make sure your software is built using the best technologies available.</div>
+                        <Fade fraction={1}>
+                            <div className="work-category">
+                                <div className="icon">
+                                    <i className="fa-solid fa-microchip"></i>
+                                </div>
+                                <div className="description">With over 10 years of experience working with the newest and best 
+                                technologies, we will make sure your software is built using the best technologies available.</div>
+                            </div>
+                        </Fade> 
+                        
+                        <Fade fraction={1} delay={300}>
+                            <div className="work-category">
+                                <div className="icon"><i className="fa-solid fa-palette"></i></div>
+                                <div className="description">We realise the importance of great design when developing a user 
+                                interface, and keep this in mind for the entire duration of product development.</div>
+                            </div>
+                        </Fade>
+                        
+                        <Fade fraction={1} delay={600}>
+                            <div className="work-category">
+                                <div className="icon"><i className="fa-solid fa-screwdriver-wrench"></i></div>
+                                <div className="description">We provide flexible support options to ensure that your product 
+                                stays up to date with fixes and new content.</div>
+                            </div>
+                        </Fade>
+                    </div>
+
+                </div>
+
+                <div className="projects">
+                    
+                    <div className="transition-banner">
+                        <div className="rocket-container">
+                            <Parallax translateX={['0vw', '-50vw']} translateY={['0vw', '-50vw']} translate>
+                                <Rocket color="rgba(var(--yellow-color))" rotate="-45deg" />
+                            </Parallax>
                         </div>
 
-                        <div className="work-category">
-                            <div className="icon"><i class="fa-solid fa-palette"></i></div>
-                            <div className="description">We realise the importance of great design when developing a user 
-                            interface, and keep this in mind for the entire duration of product development.</div>
-                        </div>
-
-                        <div className="work-category">
-                            <div className="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                            <div className="description">We provide flexible support options to ensure that your product 
-                            stays up to date with fixes and new content.</div>
-                        </div>
+                        <h2>Previous projects</h2>
+                    </div>
+                    
+                    <div className="projects-inner">
+                        <Fade fraction={1} delay={200}>
+                            <div className="previous-projects">
+                                <div className="previous-project">
+                                    <div className="preview">
+                                        <img className='bg' src={creativebook}></img>
+                                    </div>
+                                    <div className="description">
+                                        <h3>Creative Book Northumberland</h3>
+                                        <div className="body">
+                                            This website was built in collaboration with Northumberland county to provide a space 
+                                            for creatives located in the area to advertise their services.
+                                        </div>
+                                        <div className="techs">
+                                            <div className='tech'>React</div>
+                                            <div className='tech'>Google cloud</div>
+                                            <div className='tech'>Material UI</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Fade>
                     </div>
 
                 </div>
