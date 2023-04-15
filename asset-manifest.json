@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/astry/static/css/main.ef228c43.css",
-    "main.js": "/astry/static/js/main.e632bd6c.js",
+    "main.css": "/astry/static/css/main.127e6e4c.css",
+    "main.js": "/astry/static/js/main.b389a18d.js",
     "static/js/787.c1112931.chunk.js": "/astry/static/js/787.c1112931.chunk.js",
+    "static/media/creativebook.png": "/astry/static/media/creativebook.7c8ef3f308a584965cad.png",
     "static/media/SpaceGrotesk.ttf": "/astry/static/media/SpaceGrotesk.1036357b9651eff7d3dd.ttf",
     "index.html": "/astry/index.html",
-    "main.ef228c43.css.map": "/astry/static/css/main.ef228c43.css.map",
-    "main.e632bd6c.js.map": "/astry/static/js/main.e632bd6c.js.map",
+    "main.127e6e4c.css.map": "/astry/static/css/main.127e6e4c.css.map",
+    "main.b389a18d.js.map": "/astry/static/js/main.b389a18d.js.map",
     "787.c1112931.chunk.js.map": "/astry/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef228c43.css",
-    "static/js/main.e632bd6c.js"
+    "static/css/main.127e6e4c.css",
+    "static/js/main.b389a18d.js"
   ]
 }
