@@ -1,7 +1,0 @@
-#team {
-    width: 100%;
-}
-
-#team h1::after {
-    color: rgb(var(--team-color));
-}

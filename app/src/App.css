@@ -7,10 +7,10 @@
     --rocket-anim-delay: 0.5s;
     --rocket-anim-time: 1.8s;
     --boom-anim-time: 0.5s;
+    --text-anim-time: 3s;
 
     --padding: 40px;
-    --header-height: 80px;
-    --sections-height: 80px;
+    --header-height: 70px;
     --logo-size: 40px;
 
     --blue-color: 68, 116, 171;
@@ -37,10 +37,17 @@
     --contact-color: var(--pink-color);
 }
 
+@media (max-width: 800px) {
+    :root {
+        --padding: 20px;
+    }
+}
+
 body {
     background-color: rgb(var(--bg-color));
     color: rgb(var(--text-color));
     font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
