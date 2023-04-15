@@ -5,9 +5,6 @@ import '../../css/pages/contact.css'
 
 import { useState, useEffect } from 'react'
 
-import { AiOutlineArrowDown } from 'react-icons/ai'
-import { CgWebsite } from 'react-icons/cg'
-
 import Logo from '../misc/logo.js'
 
 
@@ -120,7 +117,7 @@ function Home() {
                     <div className='slogan-container'>
                         <h1 className='slogan multicolored-text'><span>{slogan}</span></h1>
                     </div>
-                    <div className='scroll-indicator'><AiOutlineArrowDown /></div>
+                    <div className='scroll-indicator'><i class="fa-solid fa-arrow-down"></i></div>
                 </div>
             
             </div>
@@ -135,11 +132,25 @@ function Home() {
                         We might be able to help you!
                     </div>
 
+                    <div className="work-categories">
+                        <div className="work-category">
+                            <div className="icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div className="description">With over 10 years of experience working with the newest and best 
+                            technologies, we will make sure your software is built using the best technologies available.</div>
+                        </div>
 
-                    <div className="work-category">
-                        <div className="icon"><CgWebsite /></div>
+                        <div className="work-category">
+                            <div className="icon"><i class="fa-solid fa-palette"></i></div>
+                            <div className="description">We realise the importance of great design when developing a user 
+                            interface, and keep this in mind for the entire duration of product development.</div>
+                        </div>
+
+                        <div className="work-category">
+                            <div className="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <div className="description">We provide flexible support options to ensure that your product 
+                            stays up to date with fixes and new content.</div>
+                        </div>
                     </div>
-
 
                 </div>
             </div>
