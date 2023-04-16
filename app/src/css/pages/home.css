@@ -360,6 +360,48 @@
   z-index: 10;
 }
 
+.transition-banner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 20vh 0px;
+  margin-top: 160px;
+  margin-bottom: 160px;
+  font-size: 40px;
+  background-image: linear-gradient(
+      135deg, 
+      rgba(var(--red-color), 0.8) 0%, 
+      rgba(var(--purple-color), 0.8) 50%, 
+      rgba(var(--yellow-color), 0.8) 100%
+  );
+  overflow: hidden;
+}
+
+.transition-banner h2 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgba(var(--text-color), 0.1);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.transition-banner .rocket-container {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 5;
+}
+.transition-banner .rocket-container:nth-of-type(1) {
+  left: 30%;
+  bottom: 50px;
+}
+.transition-banner .rocket-container:nth-of-type(2) {
+  right: 30%;
+  top: 50px;
+}
+
 @media (max-width: 800px) {
 
   .welcome-body .slogan {

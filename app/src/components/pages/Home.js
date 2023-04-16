@@ -1,14 +1,13 @@
 import '../../css/pages/home.css'
-import '../../css/pages/about.css'
-import '../../css/pages/projects.css'
-import '../../css/pages/contact.css'
 
-import { useState, useEffect } from 'react'
-import Fade from 'react-reveal/Fade'
 import { Parallax } from 'react-scroll-parallax'
 
 import Rocket from '../misc/rocket.js'
-import creativebook from '../../assets/creativebook.png'
+import About from './about.js'
+import Projects from './projects.js'
+import Contact from './contact.js'
+
+import { useState, useEffect } from 'react'
 
 
 function Home() {
@@ -127,81 +126,50 @@ function Home() {
             
             {/* CONTENT */}
             <div className='content'>
-                <div className="about">
 
-                    <div className="dialog">
-                        👋 Hey there! Are you looking for some <span className='multicolored-text thick'>software</span>?
-                        <br /><br />
-                        We might be able to help you!
+                {/* ABOUT */}
+                <About />
+                
+
+                <div className="transition-banner projects-transition-banner">
+                    <div className="rocket-container">
+                        <Parallax speed={1} translateX={['0vw', '-30vw']} translateY={['0vw', '-30vw']}>
+                            <Rocket color="rgba(var(--yellow-color))" rotate="-45deg" />
+                        </Parallax>
                     </div>
 
-                    <div className="work-categories">
-                        <Fade fraction={1}>
-                            <div className="work-category">
-                                <div className="icon">
-                                    <i className="fa-solid fa-microchip"></i>
-                                </div>
-                                <div className="description">With over 10 years of experience working with the newest and best 
-                                technologies, we will make sure your software is built using the best technologies available.</div>
-                            </div>
-                        </Fade> 
-                        
-                        <Fade fraction={1} delay={300}>
-                            <div className="work-category">
-                                <div className="icon"><i className="fa-solid fa-palette"></i></div>
-                                <div className="description">We realise the importance of great design when developing a user 
-                                interface, and keep this in mind for the entire duration of product development.</div>
-                            </div>
-                        </Fade>
-                        
-                        <Fade fraction={1} delay={600}>
-                            <div className="work-category">
-                                <div className="icon"><i className="fa-solid fa-screwdriver-wrench"></i></div>
-                                <div className="description">We provide flexible support options to ensure that your product 
-                                stays up to date with fixes and new content.</div>
-                            </div>
-                        </Fade>
+                    <div className="rocket-container">
+                        <Parallax translateX={['0vw', '30vw']} translateY={['0vw', '30vw']}>
+                            <Rocket color="rgba(var(--red-color))" rotate="135deg" />
+                        </Parallax>
                     </div>
 
+                    <h2>Previous projects</h2>
                 </div>
+                
+                {/* PROJECTS */}
+                <Projects />
 
-                <div className="projects">
-                    
-                    <div className="transition-banner">
-                        <div className="rocket-container">
-                            <Parallax translateX={['0vw', '-50vw']} translateY={['0vw', '-50vw']} translate>
-                                <Rocket color="rgba(var(--yellow-color))" rotate="-45deg" />
-                            </Parallax>
-                        </div>
-
-                        <h2>Previous projects</h2>
-                    </div>
-                    
-                    <div className="projects-inner">
-                        <Fade fraction={1} delay={200}>
-                            <div className="previous-projects">
-                                <div className="previous-project">
-                                    <div className="preview">
-                                        <img className='bg' src={creativebook}></img>
-                                    </div>
-                                    <div className="description">
-                                        <h3>Creative Book Northumberland</h3>
-                                        <div className="body">
-                                            This website was built in collaboration with Northumberland county to provide a space 
-                                            for creatives located in the area to advertise their services.
-                                        </div>
-                                        <div className="techs">
-                                            <div className='tech'>React</div>
-                                            <div className='tech'>Google cloud</div>
-                                            <div className='tech'>Material UI</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Fade>
+                <div className="transition-banner contact-transition-banner">
+                    <div className="rocket-container">
+                        <Parallax speed={1} translateX={['0vw', '-30vw']} translateY={['0vw', '-30vw']}>
+                            <Rocket color="rgba(var(--yellow-color))" rotate="-45deg" />
+                        </Parallax>
                     </div>
 
+                    <div className="rocket-container">
+                        <Parallax translateX={['0vw', '30vw']} translateY={['0vw', '30vw']}>
+                            <Rocket color="rgba(var(--red-color))" rotate="135deg" />
+                        </Parallax>
+                    </div>
+
+                    <h2>Contact us</h2>
                 </div>
+                
+                {/* CONTACT */}
+                <Contact />
+                
+
             </div>
         </div>
     )

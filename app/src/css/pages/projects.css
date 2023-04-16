@@ -1,50 +1,12 @@
 .projects {
-    width: 100%;
-}
-
-.projects .transition-banner {
-    position: relative;
-    text-align: center;
-    padding: 20vh 0px;
-    font-size: 40px;
-    background-image: linear-gradient(
-        135deg, 
-        rgba(var(--purple-color), 0.8) 0%, 
-        rgba(var(--red-color), 0.8) 50%, 
-        rgba(var(--yellow-color), 0.8) 100%
-    );
-}
-
-.projects .transition-banner h2 {
-    position: relative;
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: rgba(var(--text-color), 0.1);
-    backdrop-filter: blur(4px);
-    z-index: 10;
-}
-
-.projects .transition-banner .rocket-container {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    left: 40%;
-    bottom: 0px;
-    z-index: 5;
-}
-
-.projects-inner {
     position: relative;
     display: block;
     margin: 0px auto;
     max-width: 1000px;
     padding: 0px var(--padding);
-    margin-top: 160px;
-    margin-bottom: 100px;
 }
 
-.projects-inner .previous-projects {
+.projects .previous-projects {
     display: flex;
     flex-direction: column;
 }
@@ -72,6 +34,7 @@
     max-width: 500px;
     border-radius: 10px;
     transition: all 0.2s;
+    cursor: pointer;
 }
 .previous-project .preview:hover img {
     opacity: 0.5;
