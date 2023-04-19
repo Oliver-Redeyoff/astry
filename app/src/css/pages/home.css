@@ -232,7 +232,7 @@
 .welcome {
   position: relative;
   width: 100vw;
-  height: 100dvh;
+  height: 100svh;
   background-color: rgb(var(--bg-lighter-color));
   z-index: 5;
 }
