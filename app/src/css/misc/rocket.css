@@ -8,10 +8,8 @@
     width: 100%;
 }
 
-.rocket .rocket-fuselage {
-    stroke: rgb(var(--primary-color));
-}
-
-.rocket .rocket-window, .rocket .rocket-engine {
+.rocket .rocket-window, 
+.rocket .rocket-fuselage,
+.rocket .rocket-engine {
     fill: rgb(var(--primary-color));
 }

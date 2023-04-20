@@ -11,7 +11,7 @@ function About() {
         <div className="about">
 
             <div className="dialog">
-                👋 Hey there! Are you looking for some <span className='multicolored-text thick'>software</span>?
+                👋 Hey there! Are you looking for help to build your <span className='multicolored-text thick'>software</span>?
                 <br /><br />
                 We might be able to help you!
             </div>

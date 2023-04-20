@@ -168,7 +168,6 @@
 .header .header-name {
   font-family: Space;
   font-size: 20px;
-  font-weight: 600;
   margin-right: 40px;
   animation-name: appear-slide;
   animation-duration: 1s;
@@ -345,6 +344,7 @@
   animation-duration: 1s;
   animation-delay: calc(var(--rocket-anim-delay) + var(--rocket-anim-time) + var(--boom-anim-time) + var(--text-anim-time));
   animation-fill-mode: backwards;
+  backdrop-filter: blur(2px);
 }
 
 .content {

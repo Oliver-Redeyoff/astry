@@ -14,7 +14,7 @@ function Home() {
 
     var sloganIndex = 0
     const slogan_texts = [
-        "We build software"
+        "Software done beautifully"
     ]
 
     const [slogan, setSlogan] = useState("")
